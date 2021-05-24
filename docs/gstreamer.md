@@ -15,7 +15,8 @@ gst-launch-1.0 v4l2src ! xvimagesink
 gst-launch-1.0 autovideosrc ! xvimagesink
 ```
 
-`autovideosrc` automatically detect available camera sources.
+- `autovideosink` instead of `xvimagesink` on Windows
+- `autovideosrc` automatically detect available camera sources.
 
 ```sh
 gst-launch-1.0 -v v4l2src device=/dev/video0 ! video/x-raw,framerate=30/1,width=640,height=480 ! xvimagesink
